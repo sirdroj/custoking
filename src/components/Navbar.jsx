@@ -3,10 +3,10 @@ import React from "react";
 export const Navbar = () => {
   return (
     <div className=" font-inter flex justify-between px-10 py-2 border-b-[1px] border-[#2F5DC0]">
-      <h1 className="flex items-center">
+      <a className="flex items-center" href="/">
         <img src="/custokingLogo.svg" alt="logo" className="w-7 text-6" />
         CustoKing
-      </h1>
+      </a>
       <div className="flex items-center gap-2 ml-10">
         {/* <div className="flex items-center gap-2">
           <img className="w-6" src="nav/hamburger.svg" />

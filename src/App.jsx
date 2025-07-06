@@ -1,21 +1,27 @@
-import React from 'react'
-// import Navbar from './components/Navbar'
-// import LandingSec from './components/home/LandingSec'
-import { Outlet } from 'react-router-dom'
-import { Navbar } from './components/Navbar'
+import React from "react";
+import { Outlet } from "react-router-dom";
+import { Navbar } from "./components/Navbar";
+import { Footerx } from "./components/Footerx";
 
 const App = () => {
   return (
-    <div className='w-full '
-    style={{
-      scrollbarWidth: '10px',
-      scrollbarColor: '#6b7280 #1f2937'
-    }}
+    <div
+      className="min-h-screen flex flex-col"
+      style={{
+        scrollbarWidth: "10px",
+        scrollbarColor: "#6b7280 #1f2937",
+      }}
     >
       <Navbar />
-      <Outlet />
-    </div>
-  )
-}
 
-export default App
+      {/* Main content takes all space between navbar and footer */}
+      <div className="flex-1">
+        <Outlet />
+      </div>
+
+      <Footerx />
+    </div>
+  );
+};
+
+export default App;
